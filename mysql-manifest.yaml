@@ -44,6 +44,7 @@ metadata:
   namespace: mysql-operator
   labels:
     app: mysql
+
 spec:
   replicas: 1
   selector:
