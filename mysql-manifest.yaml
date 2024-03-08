@@ -66,6 +66,9 @@ spec:
             memory: "512Mi"
             cpu: "700m"
         env:
+        - name: JVM_OPTIONS
+          value: "-Dspring.profiles.active=dev"
+           
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
