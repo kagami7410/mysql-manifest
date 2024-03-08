@@ -59,13 +59,12 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-pv-claim
       containers:
-        # resources:
-        #   requests:
-        #     memory: "256Mi"
-        #     cpu: "500m"
-
       - name: mysql
         image: mysql
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
