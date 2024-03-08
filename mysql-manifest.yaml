@@ -16,6 +16,7 @@ metadata:
   name: mysql-pv-claim
   namespace: mysql-operator
 spec:
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   resources:
