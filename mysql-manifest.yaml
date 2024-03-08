@@ -42,9 +42,6 @@ kind: Deployment
 metadata:
   name: mysql-deployment
   namespace: mysql-operator
-  matchLabels:
-    app: mysql
-
 spec:
   replicas: 1
   selector:
