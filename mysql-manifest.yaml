@@ -42,7 +42,7 @@ kind: Deployment
 metadata:
   name: mysql-deployment
   namespace: mysql-operator
-  labels:
+  matchLabels:
     app: mysql
 
 spec:
