@@ -63,25 +63,25 @@ spec:
         image: mysql:latest
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: Kagami2@
+          value: "Kagami2@"
           # valueFrom:
           #   secretKeyRef:
           #     name: mysql-root-pass
           #     key: password
         - name: MYSQL_DATABASE
-          value: site1_backend
+          value: "site1_backend"
           # valueFrom:
           #   secretKeyRef:
           #     name: mysql-db-url
           #     key: database
         - name: MYSQL_USER
-          value: user1
+          value: "user1"
           # valueFrom:
           #   secretKeyRef:
           #     name: mysql-user-pass
           #     key: username
         - name: MYSQL_PASSWORD
-          value: Kagami2@
+          value: "Kagami2"@
 
           # valueFrom:
           #   secretKeyRef:
