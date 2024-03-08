@@ -27,7 +27,6 @@ kind: Service
 metadata:
   name: mysql
   namespace: mysql-operator                                                                      
-
 spec:
   type: NodePort
   selector:
