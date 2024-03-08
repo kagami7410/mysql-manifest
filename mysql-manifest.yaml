@@ -88,4 +88,36 @@ spec:
         ports:
         - containerPort: 3306
           name: mysql
+---
 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-root-pass
+  namespace: mysql-operator
+type: Opaque
+data:
+  password: S2FnYW1pMkA=
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-user-pass
+  namespace: mysql-operator
+type: Opaque
+data:
+  username: dXNlcjE=
+  password: S2FnYW1pMkA=
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-db-url
+  namespace: mysql-operator
+type: Opaque
+data:
+  database: c2l0ZTFfYmFja2VuZA==
