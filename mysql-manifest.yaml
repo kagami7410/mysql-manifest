@@ -142,7 +142,7 @@ spec:
   #   - destination: 
   #       host: mysql.mysql-operator.svc.cluster.local
 
-   - match:
+  - match:
     - uri:
         prefix: /
     route:
