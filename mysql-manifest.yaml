@@ -147,7 +147,7 @@ spec:
 
   - match:
     - uri:
-        prefix: /
+        prefix: /site1_backend
     route:
     - destination:
         host: mysql.mysql-operator.svc.cluster.local
