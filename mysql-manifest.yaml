@@ -136,11 +136,17 @@ metadata:
   name: mysql-virtual-service
   namespace: mysql-operator
 spec:
-  hosts:
-  - "futakai-be-service.futakai-be.svc.cluster.local"
+  host: futakai-be-service.futakai-be.svc.cluster.local
   http:
-  - route:
-    - destination: 
-        host: "mysql.mysql-operator.svc.cluster.local"
+  # - route:
+  #   - destination: 
+  #       host: mysql.mysql-operator.svc.cluster.local
 
- 
+   - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: mysql.mysql-operator.svc.cluster.local
+        port:
+          number: 3306
