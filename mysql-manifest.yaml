@@ -140,7 +140,8 @@ spec:
   http:
   - route:
     - destination: 
-        host: mysql.mysql-operator.svc.cluster.local
+        hosts:
+        - mysql.mysql-operator.svc.cluster.local
         port:
           number: 3306
 
