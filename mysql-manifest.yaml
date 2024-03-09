@@ -138,11 +138,9 @@ metadata:
 spec:
   hosts:
   - "futakai-be-service.futakai-be.svc.cluster.local"
-  gateways:
-  - istio-system/istio-ingress-gateway
   http:
   - route:
     - destination: 
         host: "mysql.mysql-operator.svc.cluster.local"
-        
+
  
