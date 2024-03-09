@@ -139,17 +139,17 @@ spec:
   hosts:
   - mysql.mysql-operator.svc.cluster.local
   http:
-  - route:
-    - destination: 
-        host: mysql.mysql-operator.svc.cluster.local
-        port:
-          number: 3306
-
-  # - match:
-  #   - uri:
-  #       prefix: /
-  #   route:
-  #   - destination:
+  # - route:
+  #   - destination: 
   #       host: mysql.mysql-operator.svc.cluster.local
   #       port:
   #         number: 3306
+
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: mysql.mysql-operator.svc.cluster.local
+        port:
+          number: 3306
