@@ -7,8 +7,16 @@ spec:
     storage: 5Gi     
   accessModes:                                                                                
     - ReadWriteOnce                                                                           
-  hostPath:                                                                                   
-    path: "/mysql"                                                                    
+  local:
+    path: /mysql
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - k8sworker1-virtual-machine                                                                   
 ---                                                                                           
 apiVersion: v1                                                                                
 kind: PersistentVolumeClaim                                                                   
